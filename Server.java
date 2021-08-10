@@ -12,7 +12,7 @@ public class Server extends JFrame implements KeyListener
   BufferedReader br;
   PrintWriter out;
 
-  JLabel heading=new JLabel("Client Area");
+  JLabel heading=new JLabel("Server Area");
   JTextArea messageArea = new JTextArea();
   JTextField messageInput=new JTextField();
   JScrollPane scrollPane = new JScrollPane(messageArea);
@@ -25,7 +25,7 @@ public class Server extends JFrame implements KeyListener
       {
           server = new ServerSocket(7778);
           System.out.println("Server is ready to accept connection request");
-          System.out.println("waiting..");
+          System.out.println("waiting...");
           socket=server.accept();  // Connection with Client
 
           br=new BufferedReader(new InputStreamReader(socket.getInputStream()));
